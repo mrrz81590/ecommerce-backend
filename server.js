@@ -10,10 +10,10 @@ app.use(express.json());
 
 // test route
 app.get("/", (req, res) => {
-  res.send("Backend started successfully");
-  app.use("/api/products", require("./routes/productRoutes"));
+  res.send("Backend started successfully"); 
   
 });
+app.use("/api/products", require("./routes/productRoutes"));
 
 // DB connect
 mongoose.connect(process.env.MONGO_URI)
