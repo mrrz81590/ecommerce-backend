@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   
 });
 app.use("/api/products", require("./routes/productRoutes"));
-
+app.use("/api/hero", require("./routes/heroRoutes"));
 // DB connect
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
